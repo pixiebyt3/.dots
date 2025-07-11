@@ -1,0 +1,16 @@
+
+alias ls='lsd --long --all --human-readable --size bytes --date locale --timesort --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias cat='bat'
+alias chromium='/opt/thorium-browser-avx2/thorium-browser'
+alias reload="exec ${SHELL} -l"
+alias pls='sudo '
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias untar='tar xvf'
+alias cls='clear'
+alias dir='tree -C'
+alias ping='ping -c 5'

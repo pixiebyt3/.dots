@@ -1,0 +1,33 @@
+
+extract() {
+  if [ -f "$1" ]; then
+    case "$1" in
+      *.tar.bz2)   tar xjvf "$1"   ;;
+      *.tar.gz)    tar xzvf "$1"   ;;
+      *.tar.xz)    tar xJvf "$1"   ;;
+      *.tar.zst)   unzstd -v "$1" && tar xvf "${1%.zst}" ;;
+      *.tar)       tar xvf "$1"    ;;
+      *.tbz2)      tar xjvf "$1"   ;;
+      *.tgz)       tar xzvf "$1"   ;;
+      *.gz)        gunzip -v "$1"  ;;
+      *.bz2)       bunzip2 -v "$1" ;;
+      *.xz)        unxz -v "$1"    ;;
+      *.zip)       unzip -v "$1"   ;;
+      *.rar)       unrar x -v "$1" ;;
+      *.7z)        7z x -bb1 "$1"  ;;
+      *.Z)         uncompress -v "$1" ;;
+      *.lzma)      unlzma -v "$1"  ;;
+      *)           echo " Unrecognized archive format '$1'" ;;
+    esac
+  else
+    echo " '$1' is not an archive."
+  fi
+}
+
+mkd() {
+  mkdir -vp "$1" && cd "$1" && pwd
+}
+
+search() {
+  grep --color=auto -Rn "$1" .
+}

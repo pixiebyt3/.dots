@@ -1,0 +1,27 @@
+#
+# ~/.bashrc
+#
+
+[[ $- != *i* ]] && return
+
+shopt -s nullglob
+shopt -s histappend # Appending to history, not overwriting
+
+ADDITIONAL_FILES=(
+  /usr/local/etc/bash_completion
+)
+
+for EXTRA_CONF in ~/.config/bash/rc.d/*.bash*; do
+    if [ -r "$EXTRA_CONF" ] && [ -f "$EXTRA_CONF" ]; then
+        source "$EXTRA_CONF"
+    fi
+done
+unset conf
+
+for ADDITIONAL_FILE in "${ADDITIONAL_FILES[@]}"; do
+  [ -r "$ADDITIONAL_FILE" ] && [ -f "$ADDITIONAL_FILE" ] && source "$ADDITIONAL_FILE"
+done
+
+eval "$(starship init bash)"
+hyfetch
+[ -r "$ENV_FILE" ] && [ -f "$ENV_FILE" ] && source "$ENV_FILE"

@@ -1,0 +1,67 @@
+{
+    "workbench.colorTheme": "N7 Soft Pink",
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "GeistMono Nerd Font",
+    "editor.fontWeight": "bold",
+    "editor.fontSize": 13,
+    "editor.fontLigatures": true,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[h]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[hpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "editor.renderWhitespace": "all",
+    "editor.autoIndentOnPaste": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.smoothScrolling": true,
+    "editor.stickyTabStops": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.stickyScroll.enabled": false,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.associations": {
+        "*.h.in": "c"
+    },
+    "terminal.integrated.fontFamily": "UbuntuMono Nerd Font Mono",
+    "terminal.integrated.fontWeight": "bold",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.stickyScroll.enabled": false,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        },
+        "zsh (2)": {
+            "path": "/usr/bin/zsh"
+        }
+    },
+    "terminal.integrated.defaultProfile.linux": "zsh (2)",
+}

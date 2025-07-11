@@ -1,0 +1,137 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "display": {
+    "separator": " "
+  },
+  "logo": {
+    "width": 65,
+    "height": 35,
+    "padding": {
+      "top": 5,
+      "left": 2,
+      "right": 2
+    }
+  },
+  "modules": [
+    {
+      "type": "custom",
+      "key": "               👋 Hi there, me!",
+      "format": "{#bright_cyan} "
+    },
+    {
+      "type": "datetime",
+      "key": "                    Today is\n",
+      "format": "{day-pretty>39}/{month-pretty}/{year} {hour-pretty}:{minute-pretty}:{second-pretty} {timezone-name}"
+    },
+    {
+      "type": "custom",
+      "key": "┌────────────────────────────────────────────────────┬",
+      "format": "{#bright_cyan} "
+    },
+    {
+      "type": "os",
+      "key": "{icon>7} distro",
+      "format": "{id>10}_{arch}"
+    },
+    {
+      "type": "host",
+      "key": "{icon>8} host",
+      "format": "{vendor>14} {family}"
+    },
+    {
+      "type": "custom",
+      "key": "└────────────────────────────────────────────────────┴",
+      "format": ""
+    },
+    {
+      "type": "custom",
+      "key": "┌────────────────────────────────────────────────────┬",
+      "format": "{#bright_cyan} "
+    },
+    {
+      "type": "kernel",
+      "key": "{icon>7} kernel",
+      "format": "{release>20} {arch}"
+    },
+    {
+      "type": "shell",
+      "key": "{icon>7} sh",
+      "format": "{process-name>13} {version}, tty{tty}"
+    },
+    {
+      "type": "initsystem",
+      "key": "{icon>8} init",
+      "format": "{name>15} {version}"
+    },
+    {
+      "type": "uptime",
+      "key": "{icon>7} uptime",
+      "format": "{days>7}d, {hours}h, {minutes}m, {seconds}s"
+    },
+    {
+      "type": "custom",
+      "key": "└────────────────────────────────────────────────────┴",
+      "format": ""
+    },
+    {
+      "type": "custom",
+      "key": "┌────────────────────────────────────────────────────┬",
+      "format": "{#bright_cyan} "
+    },
+    {
+      "type": "cpu",
+      "key": "{icon>7} proc",
+      "showPeCoreCount": true,
+      "format": "{name>34} [T:{cores-logical}]",
+      "temp": true
+    },
+    {
+      "type": "gpu",
+      "key": "{icon>8} gpu",
+      "detectionMethod": "auto",
+      "driverSpecific": true,
+      "format": "{driver>13} {name} [C:{core-count}]"
+    },
+    {
+      "type": "localip",
+      "key": "{icon>8} eth",
+      "showSpeed": true,
+      "format": "{ipv4>25} ({ifname})"
+    },
+    {
+      "type": "custom",
+      "key": "└────────────────────────────────────────────────────┴",
+      "format": ""
+    },
+    {
+      "type": "custom",
+      "key": "┌────────────────────────────────────────────────────┬",
+      "format": "{#bright_cyan} "
+    },
+    {
+      "type": "de",
+      "key": "{icon>7} de",
+      "format": "{process-name>21} {version}"
+    },
+    {
+      "type": "wm",
+      "key": "{icon>7} wm",
+      "format": "{pretty-name>16} on {protocol-name}"
+    },
+    {
+      "type": "theme",
+      "key": "{icon>8} theme",
+      "format": "{theme2>25}"
+    },
+    {
+      "type": "icons",
+      "key": "{icon>7} icons",
+      "format": "{icons2>25}"
+    },
+    {
+      "type": "custom",
+      "key": "└────────────────────────────────────────────────────┴",
+      "format": ""
+    }
+  ]
+}

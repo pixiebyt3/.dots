@@ -1,0 +1,76 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = '''
+[╭──](fg:arrow)$hostname$username$directory${custom.sh_version}${custom.kern_version}$git_branch$cmd_duration
+[╰────](fg:arrow)$character
+'''
+
+palette = "n7-like"
+
+[palettes.n7-like]
+bg = "#161F27"
+os_fg = "#B37BA4"
+user_fg = "#17B890"
+dir_fg = "#62D6F9"
+kern_fg = "#B37BA4"
+sh_fg = "#17B890"
+duration_fg = "#B37BA4"
+git_branch_fg = "#62D6F9"
+arrow_error_fg = "#B10F2E"
+arrow_fg = "#FEEFDD  "
+
+[line_break]
+disabled = false
+
+[hostname]
+ssh_only = false
+style = 'bg'
+format = ' []($style)[ $hostname](bg:$style fg:os_fg)[]($style) '
+trim_at = '.companyname.com'
+disabled = false
+
+[username]
+style_user = 'bg'
+format = '[]($style)[ $user](bg:$style fg:user_fg)[]($style)'
+disabled = false
+show_always = true
+
+[character]
+success_symbol = "[](fg:arrow_fg)"
+error_symbol = "[](fg:arrow_error_fg)"
+
+[directory]
+style = "bg"
+read_only_style = "bg"
+before_repo_root_style = "bg"
+format = ' []($style)[ $path](bg:$style fg:dir_fg)[$read_only]($read_only_style)[]($style)'
+truncation_length = 2
+truncation_symbol = "…/"
+truncate_to_repo = true
+read_only = " 󰌾 "
+
+[git_branch]
+style = 'bg'
+format = ' []($style)[ $branch $remote_name](bg:$style fg:git_branch_fg)[]($style)'
+disabled = false
+always_show_remote = true
+only_attached = true
+
+[cmd_duration]
+style = 'bg'
+format = ' []($style)[ $duration](bg:$style fg:duration_fg)[]($style)'
+min_time = 2
+
+[custom.sh_version]
+disabled = false
+when = "true"
+command = "bash 2>/dev/null --version | head -n 1 | awk '{print $4}'"
+style = 'bg'
+format = ' []($style)[ 󰞷 bash via $output](bg:$style fg:sh_fg)[]($style)'
+
+[custom.kern_version]
+disabled = false
+when = "true"
+command = "uname -r 2>/dev/null"
+style = 'bg'
+format = ' []($style)[ $output](bg:$style fg:kern_fg)[]($style)'

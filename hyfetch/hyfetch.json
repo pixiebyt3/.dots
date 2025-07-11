@@ -1,0 +1,16 @@
+{
+    "preset": "xenogender",
+    "mode": "rgb",
+    "light_dark": "dark",
+    "lightness": 0.81,
+    "color_align": {
+        "mode": "vertical",
+        "custom_colors": [],
+        "fore_back": []
+    },
+    "backend": "fastfetch",
+    "args": "--config /home/pixiebyte/.dots/hyfetch/config.jsonc",
+    "distro": "tux",
+    "pride_month_shown": [],
+    "pride_month_disable": false
+}

@@ -1,0 +1,24 @@
+
+# Autoload modules
+autoload -Uz compinit && compinit
+
+# Load zsh plugins
+fpath=(/usr/share/zsh/zsh-completions $fpath)
+source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Load dotfiles
+for EXTRA_CONF in ~/.config/zsh/rc.d/*.zsh*; do
+    if [ -r "$EXTRA_CONF" ] && [ -f "$EXTRA_CONF" ]; then
+        source "$EXTRA_CONF"
+    fi
+done
+unset conf
+
+# Load .env.local file
+if [ -r "$ENV_FILE" ] && [ -f "$ENV_FILE" ]; then
+    source "$ENV_FILE"
+fi
+
+eval "$(starship init zsh)"
+hyfetch

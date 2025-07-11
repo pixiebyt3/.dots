@@ -1,0 +1,29 @@
+[general]
+cpus = 8
+editor = "vi"
+doas = false
+language = "en-US"
+noconfirm = false
+
+[aur]
+build = "/home/pixiebyte/.cache/aura/builds"
+cache = "/home/pixiebyte/.cache/aura/cache"
+clones = "/home/pixiebyte/.cache/aura/packages"
+hashes = "/home/pixiebyte/.cache/aura/hashes"
+chroot = []
+ignores = []
+git = false
+hotedit = false
+shellcheck = false
+diff = false
+delmakedeps = false
+clean = false
+warn_unknowns = true
+nocheck = false
+skipdepcheck = false
+reverse = false
+
+[backups]
+snapshots = "/home/pixiebyte/.cache/aura/snapshots"
+automatic = true
+
